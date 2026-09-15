@@ -41,6 +41,10 @@ Apache Answer is deployed and running on an AWS EC2 instance.
 
 The application is connected to the PostgreSQL database hosted on Amazon RDS.
 
+## EC2 Application URL
+
+Application URL: http://15.207.89.183:8080
+
 ## Database Connection
 
 The EC2 application connects to Amazon RDS using the RDS endpoint and PostgreSQL port 5432.
