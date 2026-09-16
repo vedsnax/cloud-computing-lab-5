@@ -104,3 +104,64 @@ The submission includes screenshots showing:
 ## Result
 
 The Apache Answer application running on AWS EC2 was successfully connected to AWS RDS PostgreSQL, and all CRUD operations were successfully demonstrated.
+
+
+
+## Assignment 2 – DynamoDB CRUD Application
+
+### Objective
+To deploy and connect a NoSQL database (Amazon DynamoDB) with an application running on AWS EC2 and demonstrate all CRUD operations.
+
+### Architecture
+
+EC2 Instance
+→ Flask Application
+→ Boto3
+→ IAM Role
+→ Amazon DynamoDB
+
+### DynamoDB Details
+
+- Database: Amazon DynamoDB
+- Table Name: `lab5-apache-answer-dynamodb`
+- Region: `ap-south-1`
+- Partition Key: `studentId`
+- Key Type: String
+
+### Security
+
+The EC2 instance accesses DynamoDB using an IAM Role. No AWS access keys are hardcoded in the application.
+
+### CRUD Operations
+
+The application demonstrates:
+
+- **Create:** Add a new student record.
+- **Read:** Display student records stored in DynamoDB.
+- **Update:** Modify student information.
+- **Delete:** Remove a student record.
+
+### DynamoDB Datatypes
+
+The application demonstrates the required five DynamoDB data types:
+
+| Data Type | Attribute | Example |
+|---|---|---|
+| String | `studentId` | `STU002` |
+| Number | `age` | `21` |
+| Boolean | `isActive` | `true` |
+| List | `skills` | `AWS, Python, SQL` |
+| Map | `address` | City and Pincode |
+
+### Application URL
+
+`http://15.207.89.183:5000`
+
+### Technologies Used
+
+- AWS EC2
+- Amazon DynamoDB
+- AWS IAM
+- Python
+- Flask
+- Boto3
